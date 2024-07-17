@@ -1,7 +1,6 @@
 import streamlit as st
 from datetime import datetime
 from datetime import date
-import plotly.express as px
 import pandas as pd
 import json
 import os
@@ -90,9 +89,8 @@ def show_checklist():
             
         with col3:
 
-            left, right = st.columns([1,15])
-            left.write("❌")
-            if right.button(f"Delete task {index + 1}"):
+  
+            if st.button(f"❌ Delete task {index + 1}"):
                 st.session_state['tasks'].pop(index)
                 save_tasks(st.session_state['tasks'])
                 st.rerun()
