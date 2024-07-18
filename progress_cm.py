@@ -16,7 +16,7 @@ st.title("Progress for Content Managers")
 
 st.write(f'Today is {datetime.now().strftime("%d %B, %Y")}')
 
-CHECKLIST_FILE = '/workspaces/yash_progress/checklist.json'
+CHECKLIST_FILE = "/Users/lucasbakker/Documents/Projects/yash_progress/checklist.json"
 
 def reorder_tasks():
     st.session_state['tasks'].sort(key=lambda x: x['deadline'])
